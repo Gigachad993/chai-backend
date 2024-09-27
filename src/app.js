@@ -24,4 +24,12 @@ app.use(express.static("public"));
 // it is used to get the cookie of a user from their browser and also used for set the cookie to the particular user's browser
 app.use(cookieParser());
 
+
+// import Routes
+import healthcheckRouter from "./routes/healthcheck.routes.js";
+
+
+// Routes
+app.use("/api/v1/healthcheck", healthcheckRouter);    
+
 export { app };
